@@ -10,9 +10,10 @@ import SwiftyJSON
 import Alamofire
 
 class Api {
+    let BASEURL = "https://vedgwwprd3.execute-api.us-east-1.amazonaws.com/dev/arshop/prac3"
     
     func getProducts(completion: @escaping ([Product]?) -> Void) {
-        Alamofire.request("https://vedgwwprd3.execute-api.us-east-1.amazonaws.com/dev/arshop/prac3?api=productList").responseJSON { response in
+        Alamofire.request("\(self.BASEURL)?api=productList").responseJSON { response in
             
             if let json = response.result.value {
                 let data = JSON(json)
@@ -24,6 +25,25 @@ class Api {
                 }
                 
                 completion(products)
+            } else {
+                completion(nil)
+            }
+        }
+    }
+    
+    func getTMobileStores(completion: @escaping ([Place]?) -> Void) {
+        Alamofire.request("\(self.BASEURL)?api=locations").responseJSON { response in
+            
+            if let json = response.result.value {
+                let data = JSON(json)
+                var places = [Place]()
+                
+                for item in data["data"]["results"].arrayValue {
+                    let place = Place(json: item)
+                    places.append(place)
+                }
+                
+                completion(places)
             } else {
                 completion(nil)
             }
