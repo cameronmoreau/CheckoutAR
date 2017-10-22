@@ -41,6 +41,7 @@
 		7EA5ED001F9C6FCF00A16431 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA5ECFF1F9C6FCF00A16431 /* Place.swift */; };
 		7EA5ED031F9C735200A16431 /* CheckoutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA5ED021F9C735200A16431 /* CheckoutTableViewController.swift */; };
 		7EA5ED051F9C739C00A16431 /* CheckoutItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA5ED041F9C739C00A16431 /* CheckoutItemTableViewCell.swift */; };
+		7EA5ED081F9CE3C200A16431 /* PlacesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA5ED071F9CE3C200A16431 /* PlacesTableViewController.swift */; };
 		DD3989AA19B3A2486A7382E8 /* Pods_ARShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9322C1438CF2573F421ACFB /* Pods_ARShop.framework */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +83,7 @@
 		7EA5ECFF1F9C6FCF00A16431 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		7EA5ED021F9C735200A16431 /* CheckoutTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutTableViewController.swift; sourceTree = "<group>"; };
 		7EA5ED041F9C739C00A16431 /* CheckoutItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutItemTableViewCell.swift; sourceTree = "<group>"; };
+		7EA5ED071F9CE3C200A16431 /* PlacesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesTableViewController.swift; sourceTree = "<group>"; };
 		9648A883BB60EC247ABF4F8A /* Pods-ARShop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARShop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ARShop/Pods-ARShop.debug.xcconfig"; sourceTree = "<group>"; };
 		F9322C1438CF2573F421ACFB /* Pods_ARShop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ARShop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -205,6 +207,7 @@
 		7E1124F71F9C2B9B00433E64 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				7EA5ED061F9CE39000A16431 /* Places */,
 				7EA5ED011F9C734200A16431 /* Checkout */,
 				7E1124F91F9C2BDB00433E64 /* Search */,
 				7E1124F81F9C2BA400433E64 /* ARVision */,
@@ -287,6 +290,14 @@
 				7EA5ED041F9C739C00A16431 /* CheckoutItemTableViewCell.swift */,
 			);
 			path = Checkout;
+			sourceTree = "<group>";
+		};
+		7EA5ED061F9CE39000A16431 /* Places */ = {
+			isa = PBXGroup;
+			children = (
+				7EA5ED071F9CE3C200A16431 /* PlacesTableViewController.swift */,
+			);
+			path = Places;
 			sourceTree = "<group>";
 		};
 		CCB064214A282419FBFA235C /* Frameworks */ = {
@@ -449,6 +460,7 @@
 				7E1124EB1F9C294200433E64 /* ViewController+ARSCNViewDelegate.swift in Sources */,
 				7E1125001F9C5F8E00433E64 /* Api.swift in Sources */,
 				7E1124D21F9C291B00433E64 /* ARSCNView+HitTests.swift in Sources */,
+				7EA5ED081F9CE3C200A16431 /* PlacesTableViewController.swift in Sources */,
 				7E1124F51F9C2A4800433E64 /* Product.swift in Sources */,
 				7E1124EA1F9C294200433E64 /* ViewController.swift in Sources */,
 				7E1124AF1F9C290D00433E64 /* SettingsViewController.swift in Sources */,

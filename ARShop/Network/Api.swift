@@ -8,11 +8,12 @@
 
 import SwiftyJSON
 import Alamofire
+import MapKit
 
 class Api {
     let BASEURL = "https://vedgwwprd3.execute-api.us-east-1.amazonaws.com/dev/arshop/prac3"
     
-    func checkoutOrder(price: String, latittude: Double, longitude: Double, completion: @escaping () -> Void) {
+    func checkoutOrder(price: String, latittude: CLLocationDegrees, longitude: CLLocationDegrees, completion: @escaping () -> Void) {
         Alamofire.request("\(self.BASEURL)?api=sms&cost=\(price)&lat=\(latittude)&lng=\(longitude)").responseJSON { response in
             completion()
         }

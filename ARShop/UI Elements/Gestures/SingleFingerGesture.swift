@@ -61,7 +61,7 @@ class SingleFingerGesture: Gesture {
                     
                     let n = SCNNode(geometry: text)
                     n.scale = SCNVector3Make(0.15, 0.15, 0.15)
-                    n.position = SCNVector3(0, 0.048, 0.005)
+                    n.position = SCNVector3(-0.085, 0.044, 0.005)
                     sceneView.scene.rootNode.childNode(withName: targetProduct.modelKey, recursively: false)?.addChildNode(n)
                 }
             }

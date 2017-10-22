@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CheckoutTableViewController: UITableViewController {
+class CheckoutTableViewController: UITableViewController, PlacesDelegate {
     
     @IBOutlet weak var checkoutButton: UIButton!
     @IBOutlet weak var subTotalLabel: UILabel!
@@ -18,6 +18,8 @@ class CheckoutTableViewController: UITableViewController {
     var cartDelegate: CartDelegate?
     let api = Api()
     var total: String?
+    
+    var place = (UIApplication.shared.delegate as! AppDelegate).tmobileStores[0]
 
     
     @IBAction func cancelBtnPressed(_ sender: UIBarButtonItem) {
@@ -29,7 +31,8 @@ class CheckoutTableViewController: UITableViewController {
         UIView.animate(withDuration: 0.6) {
             self.checkoutButton.alpha = 0.2
             
-            self.api.checkoutOrder(price: self.total!, latittude: 0, longitude: 0, completion: {
+            let coord = self.place.location?.coordinate
+            self.api.checkoutOrder(price: self.total!, latittude: coord!.latitude, longitude: coord!.longitude, completion: {
                 (UIApplication.shared.delegate as! AppDelegate).cart.removeAll()
                 self.cartDelegate?.cartUpdated()
                 
@@ -73,16 +76,34 @@ class CheckoutTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return 2
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
+        if section == 1 {
+            return 1
+        }
         return cart.count
     }
-
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.tableView.deselectRow(at: indexPath, animated: true)
+        
+        if indexPath.section == 1 {
+            self.performSegue(withIdentifier: "pickStoreSegue", sender: nil)
+        }
+    }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if indexPath.section == 1 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "locationCell", for: indexPath)
+            cell.textLabel!.text = place.address!
+            cell.detailTextLabel!.text = String.init(format: "%.1f miles away", place.dist!/1609.344)
+            
+            return cell
+        }
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "checkoutItemCell", for: indexPath) as! CheckoutItemTableViewCell
 
         // Configure the cell...
@@ -92,6 +113,18 @@ class CheckoutTableViewController: UITableViewController {
         return cell
     }
 
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section == 0 {
+            return "Cart Items"
+        }
+        return "Store Pickup Location"
+    }
+    
+    func placePicked(place: Place) {
+        self.place = place
+        self.tableView.reloadData()
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -127,14 +160,14 @@ class CheckoutTableViewController: UITableViewController {
     }
     */
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "pickStoreSegue" {
+            let vc = segue.destination as! PlacesTableViewController
+            vc.delegate = self
+        }
     }
-    */
 
 }
