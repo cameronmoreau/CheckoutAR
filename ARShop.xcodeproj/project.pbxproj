@@ -27,7 +27,6 @@
 		7E1124DA1F9C291B00433E64 /* Models.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E1124C91F9C291B00433E64 /* Models.scnassets */; };
 		7E1124E01F9C292200433E64 /* VirtualObjectManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1124DC1F9C292200433E64 /* VirtualObjectManager.swift */; };
 		7E1124E11F9C292200433E64 /* VirtualObjects.json in Resources */ = {isa = PBXBuildFile; fileRef = 7E1124DD1F9C292200433E64 /* VirtualObjects.json */; };
-		7E1124E21F9C292200433E64 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1124DF1F9C292200433E64 /* SearchViewController.swift */; };
 		7E1124E41F9C292B00433E64 /* VirtualObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1124E31F9C292B00433E64 /* VirtualObject.swift */; };
 		7E1124EA1F9C294200433E64 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1124E51F9C294200433E64 /* ViewController.swift */; };
 		7E1124EB1F9C294200433E64 /* ViewController+ARSCNViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1124E61F9C294200433E64 /* ViewController+ARSCNViewDelegate.swift */; };
@@ -35,6 +34,9 @@
 		7E1124ED1F9C294200433E64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1124E81F9C294200433E64 /* AppDelegate.swift */; };
 		7E1124EE1F9C294200433E64 /* ViewController+Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1124E91F9C294200433E64 /* ViewController+Actions.swift */; };
 		7E1124F21F9C29AD00433E64 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7E1124F11F9C29AD00433E64 /* Info.plist */; };
+		7E1124F51F9C2A4800433E64 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1124F41F9C2A4800433E64 /* Product.swift */; };
+		7E1124FB1F9C2C1A00433E64 /* SearchResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1124FA1F9C2C1A00433E64 /* SearchResultTableViewCell.swift */; };
+		7E1124FD1F9C2CBD00433E64 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1124FC1F9C2CBD00433E64 /* SearchTableViewController.swift */; };
 		DD3989AA19B3A2486A7382E8 /* Pods_ARShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9322C1438CF2573F421ACFB /* Pods_ARShop.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,7 +62,6 @@
 		7E1124C91F9C291B00433E64 /* Models.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = Models.scnassets; sourceTree = "<group>"; };
 		7E1124DC1F9C292200433E64 /* VirtualObjectManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VirtualObjectManager.swift; sourceTree = "<group>"; };
 		7E1124DD1F9C292200433E64 /* VirtualObjects.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = VirtualObjects.json; sourceTree = "<group>"; };
-		7E1124DF1F9C292200433E64 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		7E1124E31F9C292B00433E64 /* VirtualObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VirtualObject.swift; sourceTree = "<group>"; };
 		7E1124E51F9C294200433E64 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7E1124E61F9C294200433E64 /* ViewController+ARSCNViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+ARSCNViewDelegate.swift"; sourceTree = "<group>"; };
@@ -68,6 +69,10 @@
 		7E1124E81F9C294200433E64 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E1124E91F9C294200433E64 /* ViewController+Actions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+Actions.swift"; sourceTree = "<group>"; };
 		7E1124F11F9C29AD00433E64 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E1124F41F9C2A4800433E64 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		7E1124F61F9C2B4B00433E64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ARShop/Info.plist; sourceTree = SOURCE_ROOT; };
+		7E1124FA1F9C2C1A00433E64 /* SearchResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultTableViewCell.swift; sourceTree = "<group>"; };
+		7E1124FC1F9C2CBD00433E64 /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		7E5300DF1F9C25C2000C0113 /* ARShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9648A883BB60EC247ABF4F8A /* Pods-ARShop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARShop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ARShop/Pods-ARShop.debug.xcconfig"; sourceTree = "<group>"; };
 		F9322C1438CF2573F421ACFB /* Pods_ARShop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ARShop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -164,6 +169,7 @@
 		7E1124C51F9C291B00433E64 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7E1124F61F9C2B4B00433E64 /* Info.plist */,
 				7E1124C61F9C291B00433E64 /* Assets.xcassets */,
 				7E1124C81F9C291B00433E64 /* LaunchScreen.storyboard */,
 				7E1124C91F9C291B00433E64 /* Models.scnassets */,
@@ -175,18 +181,48 @@
 		7E1124DB1F9C292200433E64 /* Virtual Objects */ = {
 			isa = PBXGroup;
 			children = (
+				7E1124E31F9C292B00433E64 /* VirtualObject.swift */,
 				7E1124DC1F9C292200433E64 /* VirtualObjectManager.swift */,
 				7E1124DD1F9C292200433E64 /* VirtualObjects.json */,
 			);
 			path = "Virtual Objects";
 			sourceTree = "<group>";
 		};
-		7E1124DE1F9C292200433E64 /* ViewControllers */ = {
+		7E1124F31F9C2A3900433E64 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				7E1124DF1F9C292200433E64 /* SearchViewController.swift */,
+				7E1124F41F9C2A4800433E64 /* Product.swift */,
 			);
-			path = ViewControllers;
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7E1124F71F9C2B9B00433E64 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7E1124F91F9C2BDB00433E64 /* Search */,
+				7E1124F81F9C2BA400433E64 /* ARVision */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		7E1124F81F9C2BA400433E64 /* ARVision */ = {
+			isa = PBXGroup;
+			children = (
+				7E1124E51F9C294200433E64 /* ViewController.swift */,
+				7E1124E91F9C294200433E64 /* ViewController+Actions.swift */,
+				7E1124E61F9C294200433E64 /* ViewController+ARSCNViewDelegate.swift */,
+				7E1124E71F9C294200433E64 /* ViewController+ObjectSelection.swift */,
+			);
+			path = ARVision;
+			sourceTree = "<group>";
+		};
+		7E1124F91F9C2BDB00433E64 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				7E1124FA1F9C2C1A00433E64 /* SearchResultTableViewCell.swift */,
+				7E1124FC1F9C2CBD00433E64 /* SearchTableViewController.swift */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 		7E5300D61F9C25C2000C0113 = {
@@ -210,14 +246,10 @@
 		7E5300E11F9C25C2000C0113 /* ARShop */ = {
 			isa = PBXGroup;
 			children = (
+				7E1124F71F9C2B9B00433E64 /* Controllers */,
+				7E1124F31F9C2A3900433E64 /* Models */,
 				7E1124F11F9C29AD00433E64 /* Info.plist */,
 				7E1124E81F9C294200433E64 /* AppDelegate.swift */,
-				7E1124E51F9C294200433E64 /* ViewController.swift */,
-				7E1124E91F9C294200433E64 /* ViewController+Actions.swift */,
-				7E1124E61F9C294200433E64 /* ViewController+ARSCNViewDelegate.swift */,
-				7E1124E71F9C294200433E64 /* ViewController+ObjectSelection.swift */,
-				7E1124E31F9C292B00433E64 /* VirtualObject.swift */,
-				7E1124DE1F9C292200433E64 /* ViewControllers */,
 				7E1124DB1F9C292200433E64 /* Virtual Objects */,
 				7E1124C21F9C291B00433E64 /* Base.lproj */,
 				7E1124B11F9C291A00433E64 /* Extensions */,
@@ -375,17 +407,19 @@
 			files = (
 				7E1124CB1F9C291B00433E64 /* UIViewExtension.swift in Sources */,
 				7E1124CC1F9C291B00433E64 /* FocusSquare.swift in Sources */,
+				7E1124FB1F9C2C1A00433E64 /* SearchResultTableViewCell.swift in Sources */,
 				7E1124E41F9C292B00433E64 /* VirtualObject.swift in Sources */,
 				7E1124E01F9C292200433E64 /* VirtualObjectManager.swift in Sources */,
 				7E1124D41F9C291B00433E64 /* TextManager.swift in Sources */,
 				7E1124B01F9C290D00433E64 /* VirtualObjectSelectionViewController.swift in Sources */,
+				7E1124FD1F9C2CBD00433E64 /* SearchTableViewController.swift in Sources */,
 				7E1124CE1F9C291B00433E64 /* Gesture.swift in Sources */,
 				7E1124D31F9C291B00433E64 /* SceneExtensions.swift in Sources */,
 				7E1124D51F9C291B00433E64 /* Utilities.swift in Sources */,
 				7E1124CA1F9C291B00433E64 /* UIColorExtension.swift in Sources */,
 				7E1124EB1F9C294200433E64 /* ViewController+ARSCNViewDelegate.swift in Sources */,
 				7E1124D21F9C291B00433E64 /* ARSCNView+HitTests.swift in Sources */,
-				7E1124E21F9C292200433E64 /* SearchViewController.swift in Sources */,
+				7E1124F51F9C2A4800433E64 /* Product.swift in Sources */,
 				7E1124EA1F9C294200433E64 /* ViewController.swift in Sources */,
 				7E1124AF1F9C290D00433E64 /* SettingsViewController.swift in Sources */,
 				7E1124CF1F9C291B00433E64 /* SingleFingerGesture.swift in Sources */,
