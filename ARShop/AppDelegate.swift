@@ -12,6 +12,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	var window: UIWindow?
     let api = Api()
     var searchResults = [Product]()
+    var tmobileStores = [Place]()
     
     func applicationDidFinishLaunching(_ application: UIApplication) {
         
@@ -19,6 +20,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         api.getProducts { products in
             if let products = products {
                 self.searchResults = products
+            }
+        }
+        
+        // Load Stores
+        api.getTMobileStores { stores in
+            if let stores = stores {
+                self.tmobileStores = stores
+                print(self.tmobileStores)
             }
         }
     }
