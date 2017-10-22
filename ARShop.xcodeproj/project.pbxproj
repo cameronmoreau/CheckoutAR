@@ -7,23 +7,68 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7E5300E31F9C25C2000C0113 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5300E21F9C25C2000C0113 /* AppDelegate.swift */; };
-		7E5300E51F9C25C2000C0113 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5300E41F9C25C2000C0113 /* ViewController.swift */; };
-		7E5300E81F9C25C2000C0113 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E5300E61F9C25C2000C0113 /* Main.storyboard */; };
-		7E5300EA1F9C25C2000C0113 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E5300E91F9C25C2000C0113 /* Assets.xcassets */; };
-		7E5300ED1F9C25C2000C0113 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E5300EB1F9C25C2000C0113 /* LaunchScreen.storyboard */; };
+		7E1124AF1F9C290D00433E64 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1124AD1F9C290D00433E64 /* SettingsViewController.swift */; };
+		7E1124B01F9C290D00433E64 /* VirtualObjectSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1124AE1F9C290D00433E64 /* VirtualObjectSelectionViewController.swift */; };
+		7E1124CA1F9C291B00433E64 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1124B21F9C291A00433E64 /* UIColorExtension.swift */; };
+		7E1124CB1F9C291B00433E64 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1124B31F9C291A00433E64 /* UIViewExtension.swift */; };
+		7E1124CC1F9C291B00433E64 /* FocusSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1124B61F9C291A00433E64 /* FocusSquare.swift */; };
+		7E1124CD1F9C291B00433E64 /* FocusSquareSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1124B71F9C291A00433E64 /* FocusSquareSegment.swift */; };
+		7E1124CE1F9C291B00433E64 /* Gesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1124B91F9C291A00433E64 /* Gesture.swift */; };
+		7E1124CF1F9C291B00433E64 /* SingleFingerGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1124BA1F9C291A00433E64 /* SingleFingerGesture.swift */; };
+		7E1124D01F9C291B00433E64 /* TwoFingerGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1124BB1F9C291A00433E64 /* TwoFingerGesture.swift */; };
+		7E1124D11F9C291B00433E64 /* Plane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1124BC1F9C291A00433E64 /* Plane.swift */; };
+		7E1124D21F9C291B00433E64 /* ARSCNView+HitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1124BE1F9C291B00433E64 /* ARSCNView+HitTests.swift */; };
+		7E1124D31F9C291B00433E64 /* SceneExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1124BF1F9C291B00433E64 /* SceneExtensions.swift */; };
+		7E1124D41F9C291B00433E64 /* TextManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1124C01F9C291B00433E64 /* TextManager.swift */; };
+		7E1124D51F9C291B00433E64 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1124C11F9C291B00433E64 /* Utilities.swift */; };
+		7E1124D61F9C291B00433E64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E1124C31F9C291B00433E64 /* Main.storyboard */; };
+		7E1124D71F9C291B00433E64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E1124C61F9C291B00433E64 /* Assets.xcassets */; };
+		7E1124D91F9C291B00433E64 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E1124C81F9C291B00433E64 /* LaunchScreen.storyboard */; };
+		7E1124DA1F9C291B00433E64 /* Models.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E1124C91F9C291B00433E64 /* Models.scnassets */; };
+		7E1124E01F9C292200433E64 /* VirtualObjectManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1124DC1F9C292200433E64 /* VirtualObjectManager.swift */; };
+		7E1124E11F9C292200433E64 /* VirtualObjects.json in Resources */ = {isa = PBXBuildFile; fileRef = 7E1124DD1F9C292200433E64 /* VirtualObjects.json */; };
+		7E1124E21F9C292200433E64 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1124DF1F9C292200433E64 /* SearchViewController.swift */; };
+		7E1124E41F9C292B00433E64 /* VirtualObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1124E31F9C292B00433E64 /* VirtualObject.swift */; };
+		7E1124EA1F9C294200433E64 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1124E51F9C294200433E64 /* ViewController.swift */; };
+		7E1124EB1F9C294200433E64 /* ViewController+ARSCNViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1124E61F9C294200433E64 /* ViewController+ARSCNViewDelegate.swift */; };
+		7E1124EC1F9C294200433E64 /* ViewController+ObjectSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1124E71F9C294200433E64 /* ViewController+ObjectSelection.swift */; };
+		7E1124ED1F9C294200433E64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1124E81F9C294200433E64 /* AppDelegate.swift */; };
+		7E1124EE1F9C294200433E64 /* ViewController+Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1124E91F9C294200433E64 /* ViewController+Actions.swift */; };
+		7E1124F21F9C29AD00433E64 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7E1124F11F9C29AD00433E64 /* Info.plist */; };
 		DD3989AA19B3A2486A7382E8 /* Pods_ARShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9322C1438CF2573F421ACFB /* Pods_ARShop.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		32D4667A6F066754B9E4293D /* Pods-ARShop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARShop.release.xcconfig"; path = "Pods/Target Support Files/Pods-ARShop/Pods-ARShop.release.xcconfig"; sourceTree = "<group>"; };
+		7E1124AD1F9C290D00433E64 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		7E1124AE1F9C290D00433E64 /* VirtualObjectSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VirtualObjectSelectionViewController.swift; sourceTree = "<group>"; };
+		7E1124B21F9C291A00433E64 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		7E1124B31F9C291A00433E64 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		7E1124B61F9C291A00433E64 /* FocusSquare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FocusSquare.swift; sourceTree = "<group>"; };
+		7E1124B71F9C291A00433E64 /* FocusSquareSegment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FocusSquareSegment.swift; sourceTree = "<group>"; };
+		7E1124B91F9C291A00433E64 /* Gesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gesture.swift; sourceTree = "<group>"; };
+		7E1124BA1F9C291A00433E64 /* SingleFingerGesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleFingerGesture.swift; sourceTree = "<group>"; };
+		7E1124BB1F9C291A00433E64 /* TwoFingerGesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoFingerGesture.swift; sourceTree = "<group>"; };
+		7E1124BC1F9C291A00433E64 /* Plane.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Plane.swift; sourceTree = "<group>"; };
+		7E1124BE1F9C291B00433E64 /* ARSCNView+HitTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ARSCNView+HitTests.swift"; sourceTree = "<group>"; };
+		7E1124BF1F9C291B00433E64 /* SceneExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneExtensions.swift; sourceTree = "<group>"; };
+		7E1124C01F9C291B00433E64 /* TextManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextManager.swift; sourceTree = "<group>"; };
+		7E1124C11F9C291B00433E64 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		7E1124C41F9C291B00433E64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
+		7E1124C61F9C291B00433E64 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7E1124C81F9C291B00433E64 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7E1124C91F9C291B00433E64 /* Models.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = Models.scnassets; sourceTree = "<group>"; };
+		7E1124DC1F9C292200433E64 /* VirtualObjectManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VirtualObjectManager.swift; sourceTree = "<group>"; };
+		7E1124DD1F9C292200433E64 /* VirtualObjects.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = VirtualObjects.json; sourceTree = "<group>"; };
+		7E1124DF1F9C292200433E64 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		7E1124E31F9C292B00433E64 /* VirtualObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VirtualObject.swift; sourceTree = "<group>"; };
+		7E1124E51F9C294200433E64 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7E1124E61F9C294200433E64 /* ViewController+ARSCNViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+ARSCNViewDelegate.swift"; sourceTree = "<group>"; };
+		7E1124E71F9C294200433E64 /* ViewController+ObjectSelection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+ObjectSelection.swift"; sourceTree = "<group>"; };
+		7E1124E81F9C294200433E64 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7E1124E91F9C294200433E64 /* ViewController+Actions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+Actions.swift"; sourceTree = "<group>"; };
+		7E1124F11F9C29AD00433E64 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E5300DF1F9C25C2000C0113 /* ARShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		7E5300E21F9C25C2000C0113 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7E5300E41F9C25C2000C0113 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		7E5300E71F9C25C2000C0113 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		7E5300E91F9C25C2000C0113 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		7E5300EC1F9C25C2000C0113 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		7E5300EE1F9C25C2000C0113 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9648A883BB60EC247ABF4F8A /* Pods-ARShop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARShop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ARShop/Pods-ARShop.debug.xcconfig"; sourceTree = "<group>"; };
 		F9322C1438CF2573F421ACFB /* Pods_ARShop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ARShop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -49,6 +94,101 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		7E1124AC1F9C290D00433E64 /* Additional View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7E1124AD1F9C290D00433E64 /* SettingsViewController.swift */,
+				7E1124AE1F9C290D00433E64 /* VirtualObjectSelectionViewController.swift */,
+			);
+			path = "Additional View Controllers";
+			sourceTree = "<group>";
+		};
+		7E1124B11F9C291A00433E64 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7E1124B21F9C291A00433E64 /* UIColorExtension.swift */,
+				7E1124B31F9C291A00433E64 /* UIViewExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7E1124B41F9C291A00433E64 /* UI Elements */ = {
+			isa = PBXGroup;
+			children = (
+				7E1124B51F9C291A00433E64 /* Focus Squares */,
+				7E1124B81F9C291A00433E64 /* Gestures */,
+				7E1124BC1F9C291A00433E64 /* Plane.swift */,
+			);
+			path = "UI Elements";
+			sourceTree = "<group>";
+		};
+		7E1124B51F9C291A00433E64 /* Focus Squares */ = {
+			isa = PBXGroup;
+			children = (
+				7E1124B61F9C291A00433E64 /* FocusSquare.swift */,
+				7E1124B71F9C291A00433E64 /* FocusSquareSegment.swift */,
+			);
+			path = "Focus Squares";
+			sourceTree = "<group>";
+		};
+		7E1124B81F9C291A00433E64 /* Gestures */ = {
+			isa = PBXGroup;
+			children = (
+				7E1124B91F9C291A00433E64 /* Gesture.swift */,
+				7E1124BA1F9C291A00433E64 /* SingleFingerGesture.swift */,
+				7E1124BB1F9C291A00433E64 /* TwoFingerGesture.swift */,
+			);
+			path = Gestures;
+			sourceTree = "<group>";
+		};
+		7E1124BD1F9C291B00433E64 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				7E1124BE1F9C291B00433E64 /* ARSCNView+HitTests.swift */,
+				7E1124BF1F9C291B00433E64 /* SceneExtensions.swift */,
+				7E1124C01F9C291B00433E64 /* TextManager.swift */,
+				7E1124C11F9C291B00433E64 /* Utilities.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		7E1124C21F9C291B00433E64 /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				7E1124C31F9C291B00433E64 /* Main.storyboard */,
+			);
+			name = Base.lproj;
+			path = ../../../../Desktop/ARShop/ARKitExample/Base.lproj;
+			sourceTree = "<group>";
+		};
+		7E1124C51F9C291B00433E64 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7E1124C61F9C291B00433E64 /* Assets.xcassets */,
+				7E1124C81F9C291B00433E64 /* LaunchScreen.storyboard */,
+				7E1124C91F9C291B00433E64 /* Models.scnassets */,
+			);
+			name = Resources;
+			path = ../../../../Desktop/ARShop/ARKitExample/Resources;
+			sourceTree = "<group>";
+		};
+		7E1124DB1F9C292200433E64 /* Virtual Objects */ = {
+			isa = PBXGroup;
+			children = (
+				7E1124DC1F9C292200433E64 /* VirtualObjectManager.swift */,
+				7E1124DD1F9C292200433E64 /* VirtualObjects.json */,
+			);
+			path = "Virtual Objects";
+			sourceTree = "<group>";
+		};
+		7E1124DE1F9C292200433E64 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7E1124DF1F9C292200433E64 /* SearchViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		7E5300D61F9C25C2000C0113 = {
 			isa = PBXGroup;
 			children = (
@@ -70,12 +210,21 @@
 		7E5300E11F9C25C2000C0113 /* ARShop */ = {
 			isa = PBXGroup;
 			children = (
-				7E5300E21F9C25C2000C0113 /* AppDelegate.swift */,
-				7E5300E41F9C25C2000C0113 /* ViewController.swift */,
-				7E5300E61F9C25C2000C0113 /* Main.storyboard */,
-				7E5300E91F9C25C2000C0113 /* Assets.xcassets */,
-				7E5300EB1F9C25C2000C0113 /* LaunchScreen.storyboard */,
-				7E5300EE1F9C25C2000C0113 /* Info.plist */,
+				7E1124F11F9C29AD00433E64 /* Info.plist */,
+				7E1124E81F9C294200433E64 /* AppDelegate.swift */,
+				7E1124E51F9C294200433E64 /* ViewController.swift */,
+				7E1124E91F9C294200433E64 /* ViewController+Actions.swift */,
+				7E1124E61F9C294200433E64 /* ViewController+ARSCNViewDelegate.swift */,
+				7E1124E71F9C294200433E64 /* ViewController+ObjectSelection.swift */,
+				7E1124E31F9C292B00433E64 /* VirtualObject.swift */,
+				7E1124DE1F9C292200433E64 /* ViewControllers */,
+				7E1124DB1F9C292200433E64 /* Virtual Objects */,
+				7E1124C21F9C291B00433E64 /* Base.lproj */,
+				7E1124B11F9C291A00433E64 /* Extensions */,
+				7E1124C51F9C291B00433E64 /* Resources */,
+				7E1124B41F9C291A00433E64 /* UI Elements */,
+				7E1124BD1F9C291B00433E64 /* Utilities */,
+				7E1124AC1F9C290D00433E64 /* Additional View Controllers */,
 			);
 			path = ARShop;
 			sourceTree = "<group>";
@@ -150,9 +299,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E5300ED1F9C25C2000C0113 /* LaunchScreen.storyboard in Resources */,
-				7E5300EA1F9C25C2000C0113 /* Assets.xcassets in Resources */,
-				7E5300E81F9C25C2000C0113 /* Main.storyboard in Resources */,
+				7E1124DA1F9C291B00433E64 /* Models.scnassets in Resources */,
+				7E1124D91F9C291B00433E64 /* LaunchScreen.storyboard in Resources */,
+				7E1124F21F9C29AD00433E64 /* Info.plist in Resources */,
+				7E1124E11F9C292200433E64 /* VirtualObjects.json in Resources */,
+				7E1124D61F9C291B00433E64 /* Main.storyboard in Resources */,
+				7E1124D71F9C291B00433E64 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,28 +373,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E5300E51F9C25C2000C0113 /* ViewController.swift in Sources */,
-				7E5300E31F9C25C2000C0113 /* AppDelegate.swift in Sources */,
+				7E1124CB1F9C291B00433E64 /* UIViewExtension.swift in Sources */,
+				7E1124CC1F9C291B00433E64 /* FocusSquare.swift in Sources */,
+				7E1124E41F9C292B00433E64 /* VirtualObject.swift in Sources */,
+				7E1124E01F9C292200433E64 /* VirtualObjectManager.swift in Sources */,
+				7E1124D41F9C291B00433E64 /* TextManager.swift in Sources */,
+				7E1124B01F9C290D00433E64 /* VirtualObjectSelectionViewController.swift in Sources */,
+				7E1124CE1F9C291B00433E64 /* Gesture.swift in Sources */,
+				7E1124D31F9C291B00433E64 /* SceneExtensions.swift in Sources */,
+				7E1124D51F9C291B00433E64 /* Utilities.swift in Sources */,
+				7E1124CA1F9C291B00433E64 /* UIColorExtension.swift in Sources */,
+				7E1124EB1F9C294200433E64 /* ViewController+ARSCNViewDelegate.swift in Sources */,
+				7E1124D21F9C291B00433E64 /* ARSCNView+HitTests.swift in Sources */,
+				7E1124E21F9C292200433E64 /* SearchViewController.swift in Sources */,
+				7E1124EA1F9C294200433E64 /* ViewController.swift in Sources */,
+				7E1124AF1F9C290D00433E64 /* SettingsViewController.swift in Sources */,
+				7E1124CF1F9C291B00433E64 /* SingleFingerGesture.swift in Sources */,
+				7E1124D01F9C291B00433E64 /* TwoFingerGesture.swift in Sources */,
+				7E1124D11F9C291B00433E64 /* Plane.swift in Sources */,
+				7E1124EE1F9C294200433E64 /* ViewController+Actions.swift in Sources */,
+				7E1124ED1F9C294200433E64 /* AppDelegate.swift in Sources */,
+				7E1124EC1F9C294200433E64 /* ViewController+ObjectSelection.swift in Sources */,
+				7E1124CD1F9C291B00433E64 /* FocusSquareSegment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		7E5300E61F9C25C2000C0113 /* Main.storyboard */ = {
+		7E1124C31F9C291B00433E64 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				7E5300E71F9C25C2000C0113 /* Base */,
+				7E1124C41F9C291B00433E64 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		7E5300EB1F9C25C2000C0113 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7E5300EC1F9C25C2000C0113 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
