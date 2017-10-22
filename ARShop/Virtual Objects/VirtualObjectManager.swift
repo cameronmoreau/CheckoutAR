@@ -8,9 +8,14 @@ A type which controls the manipulation of virtual objects.
 import Foundation
 import ARKit
 
+protocol CartDelegate {
+    func cartUpdated()
+}
+
 class VirtualObjectManager {
 	
 	weak var delegate: VirtualObjectManagerDelegate?
+    var cartDelegate: CartDelegate?
 	
 	var virtualObjects = [VirtualObject]()
     

@@ -15,6 +15,9 @@ class CheckoutTableViewController: UITableViewController {
     @IBOutlet weak var taxLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
     var cart = (UIApplication.shared.delegate as! AppDelegate).cart
+    var cartDelegate: CartDelegate?
+    let api = Api()
+    var total: String?
 
     
     @IBAction func cancelBtnPressed(_ sender: UIBarButtonItem) {
@@ -22,21 +25,38 @@ class CheckoutTableViewController: UITableViewController {
     }
 
     @IBAction func btnCheckoutPressed(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
+//        self.dismiss(animated: true, completion: nil)
+        UIView.animate(withDuration: 0.6) {
+            self.checkoutButton.alpha = 0.2
+            
+            self.api.checkoutOrder(price: self.total!, latittude: 0, longitude: 0, completion: {
+                (UIApplication.shared.delegate as! AppDelegate).cart.removeAll()
+                self.cartDelegate?.cartUpdated()
+                
+                UIView.animate(withDuration: 0.6) {
+                    self.checkoutButton.alpha = 1
+                    self.dismiss(animated: true, completion: nil)
+                }
+            })
+        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var subTotal = 0.0
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        
+        var subTotal: Double = 0.0
         // reduce in swift syntax so weird :-s
         for item in cart {
             subTotal += item.toPriceNumber()
         }
-        let tax = subTotal * 0.09
-        subTotalLabel.text = "$" + String(subTotal)
-        taxLabel.text = "$" + String(tax)
-        totalLabel.text = "$" + String(subTotal + tax)
+        let tax = subTotal * 0.0825
+        subTotalLabel.text = "Sub-Total: \(formatter.string(from: subTotal as NSNumber)!)"
+        taxLabel.text = "Tax: \(formatter.string(from: tax as NSNumber)!)"
+        self.total = formatter.string(from: (subTotal + tax) as NSNumber)
+        totalLabel.text = "Total: \(self.total!)"
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 

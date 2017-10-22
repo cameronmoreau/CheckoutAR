@@ -8,8 +8,9 @@ Main view controller for the AR experience.
 import ARKit
 import SceneKit
 import UIKit
+import Spring
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, CartDelegate {
     
     // MARK: - ARKit Config Properties
     
@@ -50,6 +51,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var messagePanel: UIView!
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var restartExperienceButton: UIButton!
+    @IBOutlet weak var cartCounterLabel: SpringLabel!
     
     // MARK: - Queues
     
@@ -63,6 +65,7 @@ class ViewController: UIViewController {
         Setting.registerDefaults()
 		setupUIControls()
         setupScene()
+        updateCartCounter()
         
         print("INIT")
     }
@@ -99,6 +102,7 @@ class ViewController: UIViewController {
         // Synchronize updates via the `serialQueue`.
         virtualObjectManager = VirtualObjectManager(updateQueue: serialQueue)
         virtualObjectManager.delegate = self
+        virtualObjectManager.cartDelegate = self
 		
 		// set up scene view
 		sceneView.setup()
@@ -300,5 +304,22 @@ class ViewController: UIViewController {
         let node = SCNNode(geometry: cube)
         node.position = SCNVector3(0, 0.4, 0)
         return node
+    }
+    
+    func updateCartCounter() {
+        let count = (UIApplication.shared.delegate as! AppDelegate).cart.count
+        self.cartCounterLabel.text = "\(count)"
+        self.cartCounterLabel.alpha = 0
+        
+        if count > 0 {
+            self.cartCounterLabel.animateToNext {
+                self.cartCounterLabel.alpha = 1
+                self.cartCounterLabel.animateTo()
+            }
+        }
+    }
+    
+    func cartUpdated() {
+        updateCartCounter()
     }
 }

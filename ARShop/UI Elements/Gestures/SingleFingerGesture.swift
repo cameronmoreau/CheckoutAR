@@ -53,9 +53,11 @@ class SingleFingerGesture: Gesture {
                 let targetProduct = targetProducts[0]
                 if cart.isEmpty || cart.last!.modelKey != targetProduct.modelKey {
                     (UIApplication.shared.delegate as! AppDelegate).cart.append(targetProduct)
+                    
                     var receiptText = targetProduct.family! + " was added to your cart"
                     let text = SCNText(string: receiptText , extrusionDepth: 0.01)
                     text.font = UIFont.systemFont(ofSize: 0.11, weight: .semibold)
+                    objectManager.cartDelegate?.cartUpdated()
                     
                     let n = SCNNode(geometry: text)
                     n.scale = SCNVector3Make(0.15, 0.15, 0.15)

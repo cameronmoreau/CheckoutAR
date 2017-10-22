@@ -76,6 +76,11 @@ extension ViewController: UIPopoverPresentationControllerDelegate {
             vc.delegate = self
         }
         
+        if segue.identifier == "checkoutSegue" {
+            let vc = (segue.destination as! UINavigationController).topViewController as! CheckoutTableViewController
+            vc.cartDelegate = self
+        }
+        
 //        guard let identifier = segue.identifier, let segueIdentifer = SegueIdentifier(rawValue: identifier) else { return }
 //        if segueIdentifer == .showObjects, let objectsViewController = segue.destination as? VirtualObjectSelectionViewController {
 //            objectsViewController.delegate = self
