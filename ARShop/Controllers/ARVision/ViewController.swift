@@ -68,6 +68,10 @@ class ViewController: UIViewController {
         
         print("INIT")
     }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
+    }
 
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
