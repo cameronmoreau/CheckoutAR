@@ -31,7 +31,7 @@ class ViewController: UIViewController {
         didSet {
             DispatchQueue.main.async {
 //                self.settingsButton.isEnabled = !self.isLoadingObject
-                self.addObjectButton.isEnabled = !self.isLoadingObject
+//                self.addObjectButton.isEnabled = !self.isLoadingObject
                 self.restartExperienceButton.isEnabled = !self.isLoadingObject
             }
         }
@@ -49,7 +49,6 @@ class ViewController: UIViewController {
     @IBOutlet var sceneView: ARSCNView!
     @IBOutlet weak var messagePanel: UIView!
     @IBOutlet weak var messageLabel: UILabel!
-    @IBOutlet weak var addObjectButton: UIButton!
     @IBOutlet weak var restartExperienceButton: UIButton!
     
     // MARK: - Queues
@@ -138,7 +137,8 @@ class ViewController: UIViewController {
 	
 	override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
 		if virtualObjectManager.virtualObjects.isEmpty {
-			chooseObject(addObjectButton)
+//            chooseObject(addObjectButton)
+            self.performSegue(withIdentifier: "searchSegue", sender: self)
 			return
 		}
 		virtualObjectManager.reactToTouchesEnded(touches, with: event)
@@ -248,7 +248,7 @@ class ViewController: UIViewController {
 	}
     
     // MARK: - Testing
-    static func getHud() -> SCNNode {
+    func getHud(product: Product) -> SCNNode {
         let cube = SCNBox(width: 0.2, height: 0.2, length: 0.01, chamferRadius: 0)
         
         let button = SCNBox(width: 0.18, height: 0.035, length: 0.01, chamferRadius: 0)
@@ -277,7 +277,7 @@ class ViewController: UIViewController {
         buttonNode.addChildNode(textNode)
         
         // Add text
-        for (i, item) in ["iPhone X", "$999.99", "Rating: 3.2/5"].enumerated() {
+        for (i, item) in [product.family!, product.formattedPrice!, "Rating: \(product.rating!)/5"].enumerated() {
             let text = SCNText(string: item, extrusionDepth: 0.01)
             text.font = UIFont.systemFont(ofSize: 0.15, weight: .semibold)
             

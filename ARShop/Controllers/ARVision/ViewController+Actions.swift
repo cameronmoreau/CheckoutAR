@@ -37,8 +37,8 @@ extension ViewController: UIPopoverPresentationControllerDelegate {
             self.textManager.showMessage("STARTING A NEW SESSION")
             
             self.virtualObjectManager.removeAllVirtualObjects()
-            self.addObjectButton.setImage(#imageLiteral(resourceName: "add"), for: [])
-            self.addObjectButton.setImage(#imageLiteral(resourceName: "addPressed"), for: [.highlighted])
+//            self.addObjectButton.setImage(#imageLiteral(resourceName: "add"), for: [])
+//            self.addObjectButton.setImage(#imageLiteral(resourceName: "addPressed"), for: [.highlighted])
             self.focusSquare?.isHidden = true
             
             self.resetTracking()
@@ -71,10 +71,15 @@ extension ViewController: UIPopoverPresentationControllerDelegate {
             popoverController.sourceRect = button.bounds
         }
         
-        guard let identifier = segue.identifier, let segueIdentifer = SegueIdentifier(rawValue: identifier) else { return }
-        if segueIdentifer == .showObjects, let objectsViewController = segue.destination as? VirtualObjectSelectionViewController {
-            objectsViewController.delegate = self
+        if segue.identifier == "searchSegue" {
+            let vc = (segue.destination as! UINavigationController).topViewController as! SearchTableViewController
+            vc.delegate = self
         }
+        
+//        guard let identifier = segue.identifier, let segueIdentifer = SegueIdentifier(rawValue: identifier) else { return }
+//        if segueIdentifer == .showObjects, let objectsViewController = segue.destination as? VirtualObjectSelectionViewController {
+//            objectsViewController.delegate = self
+//        }
     }
     
 }

@@ -8,17 +8,18 @@
 
 import UIKit
 
+protocol SearchTableViewControllerDelegate: class {
+    func virtualObjectSelectionViewController(_: SearchTableViewController, didSelectObjectAt index: Int)
+    func virtualObjectSelectionViewController(_: SearchTableViewController, didDeselectObjectAt index: Int)
+}
+
 class SearchTableViewController: UITableViewController {
 
     lazy var searchBar: UISearchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: 280, height: 20))
     
-    var searchResults = [
-        Product(color: "Space Gray", formattedPrice: "$699.99", family: "iPhone 8", rating: 2.3),
-        Product(color: "Matte Black", formattedPrice: "$699.99", family: "iPhone 8", rating: 2.3),
-        Product(color: "Black", formattedPrice: "$199.99", family: "Nexus 5X", rating: 4.9),
-        Product(color: "White", formattedPrice: "$499.99", family: "iPad Mini", rating: 4.3),
-        Product(color: "White", formattedPrice: "$299.99", family: "Pixel 2", rating: 3.4),
-    ]
+    private var selectedVirtualObjectRows = IndexSet()
+    weak var delegate: SearchTableViewControllerDelegate?
+    var searchResults = (UIApplication.shared.delegate as! AppDelegate).searchResults
     
     @IBAction func btnCancelPressed(_ sender: UIBarButtonItem) {
         self.navigationController?.dismiss(animated: true, completion: nil)
@@ -54,6 +55,16 @@ class SearchTableViewController: UITableViewController {
         cell.setup(product: product)
 
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // Check if the current row is already selected, then deselect it.
+        if selectedVirtualObjectRows.contains(indexPath.row) {
+            delegate?.virtualObjectSelectionViewController(self, didDeselectObjectAt: indexPath.row)
+        } else {
+            delegate?.virtualObjectSelectionViewController(self, didSelectObjectAt: indexPath.row)
+        }
+        self.dismiss(animated: true, completion: nil)
     }
 
     /*

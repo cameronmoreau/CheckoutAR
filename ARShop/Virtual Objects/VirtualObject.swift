@@ -31,6 +31,7 @@ struct VirtualObjectDefinition: Codable, Equatable {
 
 class VirtualObject: SCNReferenceNode, ReactsToScale {
     let definition: VirtualObjectDefinition
+    var product: Product?
     
     init(definition: VirtualObjectDefinition) {
         self.definition = definition

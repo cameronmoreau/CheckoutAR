@@ -15,6 +15,7 @@ class Product {
     var rating: Double?
     var family: String?
     var status: String?
+    var modelKey: String
     
     init(json: JSON) {
         self.color = json["color"].stringValue
@@ -23,12 +24,14 @@ class Product {
         self.rating = json["rating"].doubleValue
         self.family = json["family"].stringValue
         self.status = json["invStatus"].stringValue
+        self.modelKey = json["modelKey"].stringValue
     }
     
-    init(color: String, formattedPrice: String, family: String, rating: Double) {
+    init(color: String, formattedPrice: String, family: String, rating: Double, modelKey: String) {
         self.color = color
         self.formattedPrice = formattedPrice
         self.family = family
         self.rating = rating
+        self.modelKey = modelKey
     }
 }
