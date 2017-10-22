@@ -21,10 +21,6 @@
 		7E1124D31F9C291B00433E64 /* SceneExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1124BF1F9C291B00433E64 /* SceneExtensions.swift */; };
 		7E1124D41F9C291B00433E64 /* TextManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1124C01F9C291B00433E64 /* TextManager.swift */; };
 		7E1124D51F9C291B00433E64 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1124C11F9C291B00433E64 /* Utilities.swift */; };
-		7E1124D61F9C291B00433E64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E1124C31F9C291B00433E64 /* Main.storyboard */; };
-		7E1124D71F9C291B00433E64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E1124C61F9C291B00433E64 /* Assets.xcassets */; };
-		7E1124D91F9C291B00433E64 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E1124C81F9C291B00433E64 /* LaunchScreen.storyboard */; };
-		7E1124DA1F9C291B00433E64 /* Models.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E1124C91F9C291B00433E64 /* Models.scnassets */; };
 		7E1124E01F9C292200433E64 /* VirtualObjectManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1124DC1F9C292200433E64 /* VirtualObjectManager.swift */; };
 		7E1124E11F9C292200433E64 /* VirtualObjects.json in Resources */ = {isa = PBXBuildFile; fileRef = 7E1124DD1F9C292200433E64 /* VirtualObjects.json */; };
 		7E1124E41F9C292B00433E64 /* VirtualObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1124E31F9C292B00433E64 /* VirtualObject.swift */; };
@@ -38,6 +34,9 @@
 		7E1124FB1F9C2C1A00433E64 /* SearchResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1124FA1F9C2C1A00433E64 /* SearchResultTableViewCell.swift */; };
 		7E1124FD1F9C2CBD00433E64 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1124FC1F9C2CBD00433E64 /* SearchTableViewController.swift */; };
 		7E1125001F9C5F8E00433E64 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1124FF1F9C5F8E00433E64 /* Api.swift */; };
+		7EA5ECF51F9C6B0900A16431 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EA5ECF41F9C6B0800A16431 /* Main.storyboard */; };
+		7EA5ECF71F9C6B1600A16431 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EA5ECF61F9C6B1600A16431 /* LaunchScreen.storyboard */; };
+		7EA5ECF91F9C6B5700A16431 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EA5ECF81F9C6B5700A16431 /* Assets.xcassets */; };
 		DD3989AA19B3A2486A7382E8 /* Pods_ARShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9322C1438CF2573F421ACFB /* Pods_ARShop.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,10 +56,6 @@
 		7E1124BF1F9C291B00433E64 /* SceneExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneExtensions.swift; sourceTree = "<group>"; };
 		7E1124C01F9C291B00433E64 /* TextManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextManager.swift; sourceTree = "<group>"; };
 		7E1124C11F9C291B00433E64 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
-		7E1124C41F9C291B00433E64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
-		7E1124C61F9C291B00433E64 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		7E1124C81F9C291B00433E64 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		7E1124C91F9C291B00433E64 /* Models.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = Models.scnassets; sourceTree = "<group>"; };
 		7E1124DC1F9C292200433E64 /* VirtualObjectManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VirtualObjectManager.swift; sourceTree = "<group>"; };
 		7E1124DD1F9C292200433E64 /* VirtualObjects.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = VirtualObjects.json; sourceTree = "<group>"; };
 		7E1124E31F9C292B00433E64 /* VirtualObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VirtualObject.swift; sourceTree = "<group>"; };
@@ -76,6 +71,9 @@
 		7E1124FC1F9C2CBD00433E64 /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		7E1124FF1F9C5F8E00433E64 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		7E5300DF1F9C25C2000C0113 /* ARShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EA5ECF41F9C6B0800A16431 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		7EA5ECF61F9C6B1600A16431 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7EA5ECF81F9C6B5700A16431 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ARShop/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		9648A883BB60EC247ABF4F8A /* Pods-ARShop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARShop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ARShop/Pods-ARShop.debug.xcconfig"; sourceTree = "<group>"; };
 		F9322C1438CF2573F421ACFB /* Pods_ARShop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ARShop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -162,7 +160,6 @@
 		7E1124C21F9C291B00433E64 /* Base.lproj */ = {
 			isa = PBXGroup;
 			children = (
-				7E1124C31F9C291B00433E64 /* Main.storyboard */,
 			);
 			name = Base.lproj;
 			path = ../../../../Desktop/ARShop/ARKitExample/Base.lproj;
@@ -172,9 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				7E1124F61F9C2B4B00433E64 /* Info.plist */,
-				7E1124C61F9C291B00433E64 /* Assets.xcassets */,
-				7E1124C81F9C291B00433E64 /* LaunchScreen.storyboard */,
-				7E1124C91F9C291B00433E64 /* Models.scnassets */,
+				7EA5ECF81F9C6B5700A16431 /* Assets.xcassets */,
 			);
 			name = Resources;
 			path = ../../../../Desktop/ARShop/ARKitExample/Resources;
@@ -256,6 +251,8 @@
 		7E5300E11F9C25C2000C0113 /* ARShop */ = {
 			isa = PBXGroup;
 			children = (
+				7EA5ECF61F9C6B1600A16431 /* LaunchScreen.storyboard */,
+				7EA5ECF41F9C6B0800A16431 /* Main.storyboard */,
 				7E1124FE1F9C5F8000433E64 /* Network */,
 				7E1124F71F9C2B9B00433E64 /* Controllers */,
 				7E1124F31F9C2A3900433E64 /* Models */,
@@ -342,12 +339,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E1124DA1F9C291B00433E64 /* Models.scnassets in Resources */,
-				7E1124D91F9C291B00433E64 /* LaunchScreen.storyboard in Resources */,
+				7EA5ECF51F9C6B0900A16431 /* Main.storyboard in Resources */,
+				7EA5ECF71F9C6B1600A16431 /* LaunchScreen.storyboard in Resources */,
 				7E1124F21F9C29AD00433E64 /* Info.plist in Resources */,
 				7E1124E11F9C292200433E64 /* VirtualObjects.json in Resources */,
-				7E1124D61F9C291B00433E64 /* Main.storyboard in Resources */,
-				7E1124D71F9C291B00433E64 /* Assets.xcassets in Resources */,
+				7EA5ECF91F9C6B5700A16431 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,17 +441,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		7E1124C31F9C291B00433E64 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7E1124C41F9C291B00433E64 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		7E5300EF1F9C25C2000C0113 /* Debug */ = {
@@ -570,6 +555,7 @@
 			baseConfigurationReference = 9648A883BB60EC247ABF4F8A /* Pods-ARShop.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W73S6RNNDW;
 				INFOPLIST_FILE = ARShop/Info.plist;
@@ -586,6 +572,7 @@
 			baseConfigurationReference = 32D4667A6F066754B9E4293D /* Pods-ARShop.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W73S6RNNDW;
 				INFOPLIST_FILE = ARShop/Info.plist;
