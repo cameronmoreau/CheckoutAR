@@ -12,9 +12,11 @@
 		7E5300E81F9C25C2000C0113 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E5300E61F9C25C2000C0113 /* Main.storyboard */; };
 		7E5300EA1F9C25C2000C0113 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E5300E91F9C25C2000C0113 /* Assets.xcassets */; };
 		7E5300ED1F9C25C2000C0113 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E5300EB1F9C25C2000C0113 /* LaunchScreen.storyboard */; };
+		DD3989AA19B3A2486A7382E8 /* Pods_ARShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9322C1438CF2573F421ACFB /* Pods_ARShop.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		32D4667A6F066754B9E4293D /* Pods-ARShop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARShop.release.xcconfig"; path = "Pods/Target Support Files/Pods-ARShop/Pods-ARShop.release.xcconfig"; sourceTree = "<group>"; };
 		7E5300DF1F9C25C2000C0113 /* ARShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E5300E21F9C25C2000C0113 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E5300E41F9C25C2000C0113 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		7E5300E91F9C25C2000C0113 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7E5300EC1F9C25C2000C0113 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7E5300EE1F9C25C2000C0113 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9648A883BB60EC247ABF4F8A /* Pods-ARShop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARShop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ARShop/Pods-ARShop.debug.xcconfig"; sourceTree = "<group>"; };
+		F9322C1438CF2573F421ACFB /* Pods_ARShop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ARShop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD3989AA19B3A2486A7382E8 /* Pods_ARShop.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		547A302C53602A06EB5F99E7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9648A883BB60EC247ABF4F8A /* Pods-ARShop.debug.xcconfig */,
+				32D4667A6F066754B9E4293D /* Pods-ARShop.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		7E5300D61F9C25C2000C0113 = {
 			isa = PBXGroup;
 			children = (
 				7E5300E11F9C25C2000C0113 /* ARShop */,
 				7E5300E01F9C25C2000C0113 /* Products */,
+				547A302C53602A06EB5F99E7 /* Pods */,
+				CCB064214A282419FBFA235C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +80,14 @@
 			path = ARShop;
 			sourceTree = "<group>";
 		};
+		CCB064214A282419FBFA235C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F9322C1438CF2573F421ACFB /* Pods_ARShop.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7E5300F11F9C25C2000C0113 /* Build configuration list for PBXNativeTarget "ARShop" */;
 			buildPhases = (
+				5DD450A2426856CFB6C9293B /* [CP] Check Pods Manifest.lock */,
 				7E5300DB1F9C25C2000C0113 /* Sources */,
 				7E5300DC1F9C25C2000C0113 /* Frameworks */,
 				7E5300DD1F9C25C2000C0113 /* Resources */,
+				CC1E3BD975449A9B830DF086 /* [CP] Embed Pods Frameworks */,
+				ECBB72C2F431123AD5CB9FAA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,64 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5DD450A2426856CFB6C9293B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ARShop-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC1E3BD975449A9B830DF086 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ARShop/Pods-ARShop-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Spring/Spring.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Spring.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ARShop/Pods-ARShop-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ECBB72C2F431123AD5CB9FAA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ARShop/Pods-ARShop-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7E5300DB1F9C25C2000C0113 /* Sources */ = {
@@ -272,13 +357,14 @@
 		};
 		7E5300F21F9C25C2000C0113 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9648A883BB60EC247ABF4F8A /* Pods-ARShop.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W73S6RNNDW;
 				INFOPLIST_FILE = ARShop/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.cameronmoreau.ARShop;
+				PRODUCT_BUNDLE_IDENTIFIER = org.cameronmoreau.ARShoptmo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -287,13 +373,14 @@
 		};
 		7E5300F31F9C25C2000C0113 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32D4667A6F066754B9E4293D /* Pods-ARShop.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W73S6RNNDW;
 				INFOPLIST_FILE = ARShop/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.cameronmoreau.ARShop;
+				PRODUCT_BUNDLE_IDENTIFIER = org.cameronmoreau.ARShoptmo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
