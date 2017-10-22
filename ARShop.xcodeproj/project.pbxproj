@@ -37,6 +37,7 @@
 		7EA5ECF51F9C6B0900A16431 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EA5ECF41F9C6B0800A16431 /* Main.storyboard */; };
 		7EA5ECF71F9C6B1600A16431 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EA5ECF61F9C6B1600A16431 /* LaunchScreen.storyboard */; };
 		7EA5ECF91F9C6B5700A16431 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EA5ECF81F9C6B5700A16431 /* Assets.xcassets */; };
+		7EA5ECFB1F9C6DC400A16431 /* Models.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EA5ECFA1F9C6DC400A16431 /* Models.scnassets */; };
 		DD3989AA19B3A2486A7382E8 /* Pods_ARShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9322C1438CF2573F421ACFB /* Pods_ARShop.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +75,7 @@
 		7EA5ECF41F9C6B0800A16431 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		7EA5ECF61F9C6B1600A16431 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7EA5ECF81F9C6B5700A16431 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ARShop/Assets.xcassets; sourceTree = SOURCE_ROOT; };
+		7EA5ECFA1F9C6DC400A16431 /* Models.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = Models.scnassets; sourceTree = "<group>"; };
 		9648A883BB60EC247ABF4F8A /* Pods-ARShop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ARShop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ARShop/Pods-ARShop.debug.xcconfig"; sourceTree = "<group>"; };
 		F9322C1438CF2573F421ACFB /* Pods_ARShop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ARShop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -251,6 +253,7 @@
 		7E5300E11F9C25C2000C0113 /* ARShop */ = {
 			isa = PBXGroup;
 			children = (
+				7EA5ECFA1F9C6DC400A16431 /* Models.scnassets */,
 				7EA5ECF61F9C6B1600A16431 /* LaunchScreen.storyboard */,
 				7EA5ECF41F9C6B0800A16431 /* Main.storyboard */,
 				7E1124FE1F9C5F8000433E64 /* Network */,
@@ -342,6 +345,7 @@
 				7EA5ECF51F9C6B0900A16431 /* Main.storyboard in Resources */,
 				7EA5ECF71F9C6B1600A16431 /* LaunchScreen.storyboard in Resources */,
 				7E1124F21F9C29AD00433E64 /* Info.plist in Resources */,
+				7EA5ECFB1F9C6DC400A16431 /* Models.scnassets in Resources */,
 				7E1124E11F9C292200433E64 /* VirtualObjects.json in Resources */,
 				7EA5ECF91F9C6B5700A16431 /* Assets.xcassets in Resources */,
 			);

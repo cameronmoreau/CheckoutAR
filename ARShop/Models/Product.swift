@@ -24,7 +24,7 @@ class Product {
         self.rating = json["rating"].doubleValue
         self.family = json["family"].stringValue
         self.status = json["invStatus"].stringValue
-        self.modelKey = json["modelKey"].stringValue
+        self.modelKey = json["modelName"].stringValue
     }
     
     init(color: String, formattedPrice: String, family: String, rating: Double, modelKey: String) {
