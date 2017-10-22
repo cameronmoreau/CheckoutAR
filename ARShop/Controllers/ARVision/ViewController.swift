@@ -290,4 +290,15 @@ class ViewController: UIViewController {
         return node
 //        sceneView.scene.rootNode.addChildNode(node)
     }
+    
+    func getMapView() -> SCNNode {
+        let cube = SCNBox(width: 0.2, height: 0.2, length: 0.01, chamferRadius: 0)
+        let material = SCNMaterial()
+        let color = UIColor.black.withAlphaComponent(0.9)
+        material.diffuse.contents = color
+        cube.materials = [material]
+        let node = SCNNode(geometry: cube)
+        node.position = SCNVector3(0, 0.4, 0)
+        return node
+    }
 }

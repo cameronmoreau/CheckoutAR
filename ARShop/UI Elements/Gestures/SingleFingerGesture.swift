@@ -49,14 +49,18 @@ class SingleFingerGesture: Gesture {
             let products = (UIApplication.shared.delegate as! AppDelegate).searchResults
             let targetProducts = products.filter { $0.modelKey == firstTouchedObject?.name }
             if !targetProducts.isEmpty {
-                var cart = (UIApplication.shared.delegate as! AppDelegate).cart
+                let cart = (UIApplication.shared.delegate as! AppDelegate).cart
                 let targetProduct = targetProducts[0]
-                if cart.isEmpty {
+                if cart.isEmpty || cart.last!.modelKey != targetProduct.modelKey {
                     (UIApplication.shared.delegate as! AppDelegate).cart.append(targetProduct)
-                } else {
-                    if cart.last!.modelKey != targetProduct.modelKey{
-                        (UIApplication.shared.delegate as! AppDelegate).cart.append(targetProduct)
-                    }
+                    var receiptText = targetProduct.family! + " was added to your cart"
+                    let text = SCNText(string: receiptText , extrusionDepth: 0.01)
+                    text.font = UIFont.systemFont(ofSize: 0.11, weight: .semibold)
+                    
+                    let n = SCNNode(geometry: text)
+                    n.scale = SCNVector3Make(0.15, 0.15, 0.15)
+                    n.position = SCNVector3(0, 0.2, 0)
+                    sceneView.scene.rootNode.childNode(withName: targetProduct.modelKey, recursively: false)?.addChildNode(n)
                 }
             }
             

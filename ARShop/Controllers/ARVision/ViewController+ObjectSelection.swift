@@ -72,6 +72,7 @@ extension ViewController: SearchTableViewControllerDelegate, VirtualObjectManage
         virtualObjectManager.loadVirtualObject(object, to: position, cameraTransform: cameraTransform)
         
         object.addChildNode(self.getHud(product: product))
+        //object.addChildNode(self.getMapView())
         object.name = product.modelKey
         if object.parent == nil {
             serialQueue.async {

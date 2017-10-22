@@ -25,6 +25,9 @@ class CheckoutItemTableViewCell: UITableViewCell {
         
         if let desc = product.color {
             detailsLabel.text = desc
+            if let sku = product.sku {
+                detailsLabel.text = desc + " SKU " + sku
+            }
         }
     }
     
