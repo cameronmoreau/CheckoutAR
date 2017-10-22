@@ -30,7 +30,7 @@ class ViewController: UIViewController {
     var isLoadingObject: Bool = false {
         didSet {
             DispatchQueue.main.async {
-                self.settingsButton.isEnabled = !self.isLoadingObject
+//                self.settingsButton.isEnabled = !self.isLoadingObject
                 self.addObjectButton.isEnabled = !self.isLoadingObject
                 self.restartExperienceButton.isEnabled = !self.isLoadingObject
             }
@@ -49,7 +49,6 @@ class ViewController: UIViewController {
     @IBOutlet var sceneView: ARSCNView!
     @IBOutlet weak var messagePanel: UIView!
     @IBOutlet weak var messageLabel: UILabel!
-    @IBOutlet weak var settingsButton: UIButton!
     @IBOutlet weak var addObjectButton: UIButton!
     @IBOutlet weak var restartExperienceButton: UIButton!
     
