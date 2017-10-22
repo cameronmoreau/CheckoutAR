@@ -25,9 +25,24 @@
         "particleScaleInfo": { }
     },
      {
-     "modelName": "galaxys3",
-     "displayName": "Galaxy",
+     "modelName": "htc",
+     "displayName": "HTC One",
      "particleScaleInfo": { }
-     }
+     },
+     {
+     "modelName": "iphone4",
+     "displayName": "Iphone S4",
+     "particleScaleInfo": { }
+     },
+     {
+     "modelName": "galaxys3",
+     "displayName": "Samsung Galaxy S3",
+     "particleScaleInfo": { }
+     },
+     {
+     "modelName": "galaxy7",
+     "displayName": "Samsung Galaxy 7",
+     "particleScaleInfo": { }
+     },
 ]
  
