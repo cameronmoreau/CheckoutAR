@@ -275,7 +275,6 @@ class ViewController: UIViewController {
         textNode.position = SCNVector3(-0.07, -0.16, 0.005)
         textNode.scale = SCNVector3Make(0.15, 0.15, 0.15)
         buttonNode.addChildNode(textNode)
-        
         // Add text
         for (i, item) in [product.family!, product.formattedPrice!, "Rating: \(product.rating!)/5"].enumerated() {
             let text = SCNText(string: item, extrusionDepth: 0.01)

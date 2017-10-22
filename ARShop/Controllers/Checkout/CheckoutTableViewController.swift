@@ -14,7 +14,8 @@ class CheckoutTableViewController: UITableViewController {
     @IBOutlet weak var subTotalLabel: UILabel!
     @IBOutlet weak var taxLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
-    
+    var cart = (UIApplication.shared.delegate as! AppDelegate).cart
+
     
     @IBAction func cancelBtnPressed(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
@@ -26,7 +27,16 @@ class CheckoutTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        var subTotal = 0.0
+        // reduce in swift syntax so weird :-s
+        for item in cart {
+            subTotal += item.toPriceNumber()
+        }
+        let tax = subTotal * 0.09
+        subTotalLabel.text = "$" + String(subTotal)
+        taxLabel.text = "$" + String(tax)
+        totalLabel.text = "$" + String(subTotal + tax)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -48,7 +58,7 @@ class CheckoutTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 3
+        return cart.count
     }
 
 
@@ -56,7 +66,7 @@ class CheckoutTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "checkoutItemCell", for: indexPath) as! CheckoutItemTableViewCell
 
         // Configure the cell...
-        let product = (UIApplication.shared.delegate as! AppDelegate).searchResults[0]
+        let product = (UIApplication.shared.delegate as! AppDelegate).cart[indexPath.row]
         cell.setup(product: product)
 
         return cell

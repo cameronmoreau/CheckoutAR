@@ -34,4 +34,15 @@ class Product {
         self.rating = rating
         self.modelKey = modelKey
     }
+    
+    func toPriceNumber() -> Double {
+        let priceTextArr = self.formattedPrice!.split { $0 == "$"}
+        if priceTextArr.isEmpty {
+            return 0.0
+        }
+        if let price = Double(priceTextArr[0]) {
+            return price
+        }
+        return 0.0
+    }
 }

@@ -12,6 +12,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	var window: UIWindow?
     let api = Api()
     var searchResults = [Product]()
+    var cart = [Product]()
     var tmobileStores = [Place]()
     
     func applicationDidFinishLaunching(_ application: UIApplication) {

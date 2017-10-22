@@ -14,7 +14,6 @@ class SingleFingerGesture: Gesture {
     
     var initialTouchLocation = CGPoint()
     var latestTouchLocation = CGPoint()
-    
     var firstTouchedObject: VirtualObject?
 
     let translationThreshold: CGFloat = 30
@@ -45,6 +44,24 @@ class SingleFingerGesture: Gesture {
         }
         
         latestTouchLocation = currentTouches.first!.location(in: sceneView)
+        
+        do {
+            let products = (UIApplication.shared.delegate as! AppDelegate).searchResults
+            let targetProducts = products.filter { $0.modelKey == firstTouchedObject?.name }
+            if !targetProducts.isEmpty {
+                var cart = (UIApplication.shared.delegate as! AppDelegate).cart
+                let targetProduct = targetProducts[0]
+                if cart.isEmpty {
+                    (UIApplication.shared.delegate as! AppDelegate).cart.append(targetProduct)
+                } else {
+                    if cart.last!.modelKey != targetProduct.modelKey{
+                        (UIApplication.shared.delegate as! AppDelegate).cart.append(targetProduct)
+                    }
+                }
+            }
+            
+        } catch _ {
+        }
         
         if !translationThresholdPassed {
             let initialLocationToCurrentLocation = latestTouchLocation - initialTouchLocation
